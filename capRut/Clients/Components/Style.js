@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'lightblue',
+    backgroundColor: 'powderblue',
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: 'white',
@@ -16,15 +16,15 @@ export default (styles = StyleSheet.create({
     fontSize: 13
   },
   title: {
-    color: 'black',
+    color: 'white',
     fontWeight: 'bold',
-    fontSize: 30,
-    paddingBottom: 40,
-    fontFamily: 'ChalkboardSE-Bold'
+    fontSize: 50,
+    paddingBottom: 7,
+    fontFamily: 'TimesNewRomanPS-BoldMT'
   },
   container_signup_form: {
     flex: 1,
-    backgroundColor: 'lightblue'
+    backgroundColor: 'powderblue'
   },
   inputContainer: {
     margin: 30
