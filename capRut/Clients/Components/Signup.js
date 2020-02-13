@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { firestore, auth } from '../../fire';
+import { firestore, auth } from '../../fire';
 
 import {
   StyleSheet,
@@ -10,6 +10,8 @@ import {
   Button
 } from 'react-native';
 import styles from './Style';
+
+// var user = firebase.auth().currentUser;
 
 export default class SignUp extends Component {
   state = {
@@ -22,7 +24,7 @@ export default class SignUp extends Component {
   };
 
   render() {
-    const { username, name, password, email, firstname, lastname } = this.state;
+    const { username, age, password, email, firstname, lastname } = this.state;
     const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.container_signup_form}>
@@ -60,19 +62,27 @@ export default class SignUp extends Component {
             style={styles.textInput}
             onChangeText={value => this.setState({ password: value })}
           />
+{/* 
+          <TextInput
+            value={age}
+            placeholder="age"
+            style={styles.textInput}
+            onChangeText={value => this.setState({ age: value })}
+          /> */}
 
-          {/* <Button
+          <Button
             onPress={() => {
+              // console.log(auth.currentUser.doc.data())
               if (email && password && username && firstname && lastname) {
                 firestore
                   .collection('publicUsers')
                   .where('username', '==', username)
                   .get()
                   .then(snapshot => {
-                    console.log(snapshot.docs.length);
-                    if (snapshot.docs.length) {
+                    // console.log(snapshot.docs.length);
+                    if (!snapshot.empty) {
                       alert('Username already exists');
-                      this.setState({
+                      this.setState({ //just erases what was typed
                         username: ''
                       });
                     } else {
@@ -87,7 +97,7 @@ export default class SignUp extends Component {
                               firstname,
                               lastname
                             });
-                          //   navigate('Groups', {
+                          //   navigate('Medications', {
                           //     userId: auth.currentUser.uid
                           //   });
                         })
@@ -102,7 +112,7 @@ export default class SignUp extends Component {
             }}
             title="Add User"
             color="#841584"
-          /> */}
+          />
         </View>
       </SafeAreaView>
     );
