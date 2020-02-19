@@ -17,13 +17,13 @@ export default class Home extends Component {
         <Text style={styles.title}>Tracker</Text>
         <Button
           style={styles.button}
-          color="blue"
+          color="white"
           title="Log In"
           onPress={() => navigate("Login")}
         />
         <Button
           style={styles.button}
-          color="blue"
+          color="white"
           title="Sign Up"
           onPress={() => navigate("Signup")}
         />
