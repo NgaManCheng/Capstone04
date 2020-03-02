@@ -21,7 +21,7 @@ export default class LogIn extends Component {
     return (
       <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
-          <Text>Log In</Text>
+          <Text style={styles.titleLogin}>Log in</Text>
           <TextInput
             value={email}
             placeholder="email"
