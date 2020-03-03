@@ -50,6 +50,7 @@ export default class LogIn extends Component {
                   var errorMessage = error.message;
                   alert(errorMessage);
                 });
+                //navigate("Medications")
             }}
             title="Sign In"
             color="#841584"
