@@ -50,11 +50,11 @@ export default class LogIn extends Component {
                   var errorMessage = error.message;
                   alert(errorMessage);
                 });
-            }}
+            }} 
             title="Sign In"
             color="#841584"
           />
-        </View>
+        </View>auth
       </SafeAreaView>
     );
   }
