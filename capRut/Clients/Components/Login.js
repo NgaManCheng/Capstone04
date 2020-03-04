@@ -22,7 +22,7 @@ export default class LogIn extends Component {
     return (
       <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
-          <Text style={styles.titleLogin}>Log in</Text>
+          <Text style={styles.title}>Log in</Text>
           <TextInput
             value={email}
             placeholder="email"
@@ -54,7 +54,7 @@ export default class LogIn extends Component {
             title="Sign In"
             color="#841584"
           />
-        </View>auth
+        </View>
       </SafeAreaView>
     );
   }
