@@ -2,7 +2,7 @@ import firebase from "firebase";
 import "@firebase/firestore";
 import "firebase/firestore";
 
-  var firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyCwU0ujuoOeE7uz1TbNvBNyMs-dHhnCdb8",
     authDomain: "capstone-rutgers.firebaseapp.com",
     databaseURL: "https://capstone-rutgers.firebaseio.com",
@@ -16,3 +16,4 @@ import "firebase/firestore";
   export const auth = firebase.auth()
   export const firestore = firebase.firestore();
   export default firebase;
+  //module.exports = firebaseConfig;
