@@ -5,15 +5,28 @@ import { firestore, auth } from '../../fire';
 import { render } from 'react-dom';
 
 export default class Medications extends Component {
- state ={
-     directions: '',
-     name: '',
-     provider: ''
- };
- 
- static navigationOptions = {
-    title: 'Welcome'
+
+ constructor(props) {
+  super(props);
+  this.state = {
+   name: '',
+   provider: '',
+   directions: ''
   };
+}
+
+async getUserName() {
+  try {
+    const user = await firestore
+      .collection('publicUsers')
+      .doc(this.props.navigation.getParam('userId', 'NO-ID')) //no-id is default value
+      .get();
+
+    return user.data().username;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
  render(){
     const {directions, name, provider} = this.state;
@@ -25,18 +38,12 @@ export default class Medications extends Component {
 
           <Button
             onPress={() => {
-              
+              navigate('AddMedForm')
             }}
             title="Add New Medication"
             color="#841584"
           />
-          <Button
-            onPress={() => {
-              
-            }}
-            title="View Medications"
-            color="#841584"
-          />
+
         </View>
       </SafeAreaView>
     );

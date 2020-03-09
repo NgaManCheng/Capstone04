@@ -41,16 +41,16 @@ export default class LogIn extends Component {
             onPress={() => {
               auth
                 .signInWithEmailAndPassword(email, password)
-                // .then(user => {
-                //   navigate('Groups', {
-                //     userId: auth.currentUser.uid
-                //   });
-                // })
+                .then(user => {
+                  navigate('Medications', {
+                    userId: auth.currentUser.uid
+                  });
+                })
                 .catch(function(error) {
                   var errorMessage = error.message;
                   alert(errorMessage);
                 });
-                navigate("Medications")
+                
             }}
             title="Sign In"
             color="#841584"
