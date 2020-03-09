@@ -97,7 +97,7 @@ export default class SignUp extends Component {
                               firstname,
                               lastname
                             });
-                            navigate('Medications', {
+                            navigate('AddMedForm', {
                               userId: auth.currentUser.uid
                             });
                         })
