@@ -62,17 +62,17 @@ export default class SignUp extends Component {
             style={styles.textInput}
             onChangeText={value => this.setState({ password: value })}
           />
-
+{/* 
           <TextInput
             value={age}
             placeholder="age"
             style={styles.textInput}
             onChangeText={value => this.setState({ age: value })}
-          />
+          /> */}
 
           <Button
             onPress={() => {
-              console.log(auth.currentUser.doc.data())
+              // console.log(auth.currentUser.doc.data())
               if (email && password && username && firstname && lastname) {
                 firestore
                   .collection('publicUsers')
@@ -118,4 +118,3 @@ export default class SignUp extends Component {
     );
   }
 }
-
