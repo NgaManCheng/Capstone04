@@ -54,7 +54,7 @@ export default class LogIn extends Component {
             title="Sign In"
             color="#841584"
           />
-        </View>auth
+        </View>
       </SafeAreaView>
     );
   }

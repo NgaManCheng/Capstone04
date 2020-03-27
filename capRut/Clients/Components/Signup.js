@@ -111,7 +111,7 @@ export default class SignUp extends Component {
               }
             }}
             title="Add User"
-            color="#841584"
+            color="white"
           />
         </View>
       </SafeAreaView>

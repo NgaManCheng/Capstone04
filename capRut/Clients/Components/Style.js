@@ -1,9 +1,9 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 export default (styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#94D8DB',
+    backgroundColor: '#325C74',
     borderRadius: 4,
     borderWidth: 0.5,
     borderColor: 'white',
@@ -19,31 +19,34 @@ export default (styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 50,
-    fontFamily: 'TimesNewRomanPS-BoldMT'
+    //fontFamily: 'TimesNewRomanPS-BoldMT'
   },
   titleLogin: {
     color: 'white',
-    fontWeight: 'bold',
+    alignSelf: 'center',
     fontSize: 35,
-    fontFamily: 'TimesNewRomanPS-BoldMT'
+    //fontFamily: 'Arial'
   },
   container_signup_form: {
     flex: 1,
-    backgroundColor: '#94D8DB'
+    backgroundColor: '#325C74'
   },
   inputContainer: {
-    margin: 30
+    margin: 40
   },
   textInput: {
-    height: 32,
+    height: 35,
     textAlign: 'center',
+    alignSelf: 'center',
     color: '#333333',
-    marginTop: 20,
-    marginBottom: 10,
-    fontSize: 24,
-    borderWidth: 0.9,
-    borderBottomColor: '#111111',
-    fontFamily: 'Arial-ItalicMT'
+    marginTop: 15,
+    marginBottom: 5,
+    width: 300,
+    fontSize: 20,
+    borderColor: '#B7C3D0',
+    //fontFamily: 'Arial-ItalicMT',
+    backgroundColor: '#B7C3D0',
+    borderRadius: 25
   },
   userPage: {
     color: 'yellow',
@@ -130,7 +133,7 @@ export default (styles = StyleSheet.create({
   total: {
     fontSize: 19,
     marginBottom: 20,
-    fontFamily: 'Palatino-Bold'
+    //fontFamily: 'Palatino-Bold'
   },
   totalContainer: {
     flex: 3
@@ -138,35 +141,50 @@ export default (styles = StyleSheet.create({
 
   login: {
     color: 'yellow',
-    fontFamily: 'Palatino-Bold',
+    //fontFamily: 'Palatino-Bold',
     alignSelf: 'center',
     fontSize: 20
   },
 
   name: {
     fontSize: 20,
-    fontFamily: 'Palatino-Bold',
+    //fontFamily: 'Palatino-Bold',
     top: '2%'
   },
   edit: {
     fontSize: 20,
-    fontFamily: 'Palatino-Bold',
+    //fontFamily: 'Palatino-Bold',
     top: '1%',
     alignSelf: 'center'
   },
 
   signOut: {
     fontSize: 15,
-    fontFamily: 'Palatino-Bold',
+    //fontFamily: 'Palatino-Bold',
     flexWrap: 'nowrap'
   },
   retake: {
     paddingBottom: '10%',
     paddingTop: '3%',
     fontSize: 20,
-    fontFamily: 'Palatino-Bold',
+   // fontFamily: 'Palatino-Bold',
     top: '2%',
     alignSelf: 'center',
     color: 'white'
+  },
+  //Homepage 
+  box: {
+    height: 80,
+    backgroundColor: "#325C74",  
+    margin: 5,
+    width: Dimensions.get('window').width/2-10,
+    alignItems: "center"
+    //Dimensions.get('window').height
+  },
+  container1:{
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    flex: 1,
+    backgroundColor: '#325C74'
   }
 }));
