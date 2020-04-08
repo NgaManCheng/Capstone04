@@ -26,7 +26,7 @@ export default class Homepage extends Component {
                             style={styles.button}
                             color="white"
                             title="My Profile"
-                            onPress={() => navigate("Profile")}
+                            onPress={() => navigate('Profile')}
                         />
                 </View>
                 <View style = {styles.box}>
@@ -35,7 +35,9 @@ export default class Homepage extends Component {
                             style={styles.button}
                             color="white"
                             title="Medications"
-                            onPress={() => navigate("Medications")}
+                            onPress={() => navigate('AddMedForm', {
+                                userId: auth.currentUser.uid
+                              })}
                         />
                 </View>
                 <View style = {styles.box}>
@@ -44,7 +46,7 @@ export default class Homepage extends Component {
                             style={styles.button}
                             color="white"
                             title="Upload"
-                            onPress={() => navigate("Upload")}
+                            onPress={() => navigate('Upload')}
                         />
                 </View>
                 <View style = {styles.box}>
@@ -53,7 +55,7 @@ export default class Homepage extends Component {
                             style={styles.button}
                             color="white"
                             title="Files"
-                            onPress={() => navigate("Files")}
+                            onPress={() => navigate('Files')}
                         />
                 </View>
                 

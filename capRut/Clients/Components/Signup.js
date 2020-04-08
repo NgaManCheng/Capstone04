@@ -97,9 +97,7 @@ export default class SignUp extends Component {
                               firstname,
                               lastname
                             });
-                          //   navigate('Medications', {
-                          //     userId: auth.currentUser.uid
-                          //   });
+                            navigate('Homepage');
                         })
                         .catch(function(error) {
                           var errorMessage = error.message;
