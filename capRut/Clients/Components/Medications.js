@@ -6,35 +6,54 @@ import { render } from 'react-dom';
 
 export default class Medications extends Component {
 
- constructor(props) {
-  super(props);
-  this.state = {
-   name: '',
-   provider: '',
-   directions: ''
-  };
-}
-
-async getUserName() {
-  try {
-    const user = await firestore
-      .collection('publicUsers')
-      .doc(this.props.navigation.getParam('userId', 'NO-ID')) //no-id is default value
-      .get();
-
-    return user.data().username;
-  } catch (error) {
-    console.error(error);
+  constructor(props) {
+    super(props);
+    this.state = {
+      medications: []
+    };
   }
-}
 
- render(){
-    const {directions, name, provider} = this.state;
-    const {navigate}= this.props.navigation;
-    return(
-        <SafeAreaView style={styles.container_signup_form}>
+  async getUserName() {
+    try {
+      const user = await firestore
+        .collection('publicUsers')
+        .doc(this.props.navigation.getParam('userId', 'NO-ID')) //no-id is default value
+        .get();
+
+      return user.data().username;
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  async componentDidMount() {
+    const username = await this.getUserName();
+    this.setState({ username: username, groups: [] });
+    this.unsubscribe = firestore
+      .collection('medications')
+      .where('groupId', '==', this.props.navigation.getParam('groupId'))
+
+      .onSnapshot(docs => {
+        this.setState({ groups: [] });
+        docs.forEach(doc => {
+          this.setState({
+            groups: [...this.state.groups, { id: doc.id, data: doc.data() }]
+          });
+        });
+      });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribe();
+  }
+
+  render() {
+    const { directions, name, provider } = this.state;
+    const { navigate } = this.props.navigation;
+    return (
+      <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
-          <Text style= {styles.titleLogin}>Medications</Text>
+          <Text style={styles.titleLogin}>Medications</Text>
 
           <Button
             onPress={() => {
@@ -47,6 +66,6 @@ async getUserName() {
         </View>
       </SafeAreaView>
     );
-}
+  }
 };
 

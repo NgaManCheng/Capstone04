@@ -66,6 +66,12 @@ export default class AddGroupForm extends Component {
                                     provider: this.state.provider,
                                     directions: this.state.directions
                                 })
+                                .then(function(docRef) {
+                                    console.log( docRef.id);
+                                })
+                                .catch(function(error) {
+                                    console.error(error);
+                                })
                             // navigate('Medications', {
                             //     username: this.props.navigation.getParam('username')
                             // });
