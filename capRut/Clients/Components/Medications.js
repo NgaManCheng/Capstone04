@@ -1,68 +1,69 @@
 import React, { Component } from 'react';
-import { SafeAreaView, Text, View, TextInput, Button } from 'react-native';
+import { SafeAreaView, Text, View, TextInput, Button, ScrollView, TouchableOpacity } from 'react-native';
 import styles from "./Style";
 import { firestore, auth } from '../../fire';
 import { render } from 'react-dom';
+import { ListItem, Card, Divider } from 'react-native-elements';
 
 export default class Medications extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      medications: []
-    };
-  }
-
-  async getUserName() {
-    try {
-      const user = await firestore
-        .collection('publicUsers')
-        .doc(this.props.navigation.getParam('userId', 'NO-ID')) //no-id is default value
-        .get();
-
-      return user.data().username;
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  async componentDidMount() {
-    const username = await this.getUserName();
-    this.setState({ username: username, groups: [] });
-    this.unsubscribe = firestore
-      .collection('medications')
-      .where('groupId', '==', this.props.navigation.getParam('groupId'))
-
-      .onSnapshot(docs => {
-        this.setState({ groups: [] });
-        docs.forEach(doc => {
-          this.setState({
-            groups: [...this.state.groups, { id: doc.id, data: doc.data() }]
-          });
-        });
-      });
-  }
-
-  componentWillUnmount() {
-    this.unsubscribe();
-  }
-
   render() {
-    const { directions, name, provider } = this.state;
-    const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
-          <Text style={styles.titleLogin}>Medications</Text>
 
-          <Button
-            onPress={() => {
-              navigate('AddMedForm')
-            }}
-            title="Add New Medication"
-            color="#841584"
-          />
 
+          <ScrollView>
+            <Card title="MEDICATIONS" style={styles.card}>
+              <Text>Tynenol</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Cheng</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+              <Divider style={{ backgroundColor: 'darkblue' }} />
+              <Text>Advil</Text>
+              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text>Provider: Dr.Haque</Text>
+            </Card>
+            <TouchableOpacity
+              style={{ paddingBottom: 50 }}
+              onPress={() => {
+                navigate('AddMedForm')
+              }}
+            >
+              <Button title="Add Medication" />
+            </TouchableOpacity>
+          </ScrollView>
         </View>
       </SafeAreaView>
     );

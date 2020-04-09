@@ -72,6 +72,7 @@ export default class AddGroupForm extends Component {
                                 .catch(function(error) {
                                     console.error(error);
                                 })
+                                navigate('Medications')
                           
                         }}
                     />

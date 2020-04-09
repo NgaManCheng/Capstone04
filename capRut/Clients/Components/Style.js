@@ -32,7 +32,7 @@ export default (styles = StyleSheet.create({
     backgroundColor: '#325C74'
   },
   inputContainer: {
-    margin: 40
+    margin: 10
   },
   textInput: {
     height: 35,
@@ -70,8 +70,8 @@ export default (styles = StyleSheet.create({
     borderBottomColor: 'black',
     fontSize: 25,
     color: 'gray',
-    marginLeft: 30,
-    marginRight: 30,
+    marginLeft: 10,
+    marginRight: 10,
     marginTop: 20,
     marginBottom: 10,
     borderBottomWidth: 1
@@ -128,7 +128,7 @@ export default (styles = StyleSheet.create({
   },
 
   card: {
-    paddingBottom: 40
+    paddingBottom: 10
   },
   total: {
     fontSize: 19,
