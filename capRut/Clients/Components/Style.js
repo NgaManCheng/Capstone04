@@ -152,10 +152,11 @@ export default (styles = StyleSheet.create({
     top: '2%'
   },
   edit: {
-    fontSize: 20,
+    fontSize: 25,
     //fontFamily: 'Palatino-Bold',
     top: '1%',
-    alignSelf: 'center'
+    alignSelf: 'center',
+    color:'white'
   },
 
   signOut: {
@@ -186,5 +187,23 @@ export default (styles = StyleSheet.create({
     flexWrap: 'wrap',
     flex: 1,
     backgroundColor: '#325C74'
+  },
+  containerM: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#FFF',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingStart: 7,
+    borderColor: "#325C74",
+    borderWidth: 6,
+    borderBottomWidth: 2,
+    borderTopWidth: 4,
+    borderRadius: 15
+  }, 
+  medtitle: {
+    fontSize: 19,
+    
   }
+
 }));

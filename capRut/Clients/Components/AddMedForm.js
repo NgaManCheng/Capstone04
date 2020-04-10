@@ -31,8 +31,7 @@ export default class AddGroupForm extends Component {
         return (
             <SafeAreaView style={styles.container_signup_form}>
                 <View style={styles.inputContainer}>
-                    <Text style={styles.edit}>Add Medication</Text>
-                    <Text> Name: </Text>
+                    <Text style={styles.edit} >Add Medication</Text>
                     <TextInput
                         value={this.state.medname}
 
@@ -40,24 +39,22 @@ export default class AddGroupForm extends Component {
                         style={styles.textInput}
                         onChangeText={value => this.setState({ medname: value })}
                     />
-                    <Text> Directions: </Text>
                     <TextInput
                         value={this.state.directions}
-                        placeholder="directions"
+                        placeholder="Directions"
                         style={styles.textInput}
                         onChangeText={value => this.setState({ directions: value })}
                     />
-                    <Text> Provider: </Text>
                     <TextInput
                         value={this.state.provider}
-                        placeholder="provider"
+                        placeholder="Provider"
                         style={styles.textInput}
                         onChangeText={value => this.setState({ provider: value })}
                     />
 
                     <Button
                         title="Add Medicine"
-                        color="purple"
+                        color="white"
                         onPress={() => {
                             firestore
                                 .collection('medications')
