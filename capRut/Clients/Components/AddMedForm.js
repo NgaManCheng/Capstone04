@@ -56,7 +56,7 @@ export default class AddGroupForm extends Component {
                     />
 
                     <Button
-                        title="Add Medicine"
+                        title="Add Medication"
                         color="purple"
                         onPress={() => {
                             firestore
@@ -72,7 +72,7 @@ export default class AddGroupForm extends Component {
                                 .catch(function(error) {
                                     console.error(error);
                                 })
-                                navigate('Medications')
+                              navigate('Medications')  
                           
                         }}
                     />

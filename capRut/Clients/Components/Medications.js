@@ -8,6 +8,7 @@ import { ListItem, Card, Divider } from 'react-native-elements';
 export default class Medications extends Component {
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
@@ -55,14 +56,14 @@ export default class Medications extends Component {
               <Text>Directions: Two pills every Monday and Thursday</Text>
               <Text>Provider: Dr.Haque</Text>
             </Card>
-            <TouchableOpacity
-              style={{ paddingBottom: 50 }}
-              onPress={() => {
-                navigate('AddMedForm')
-              }}
-            >
-              <Button title="Add Medication" />
-            </TouchableOpacity>
+
+            < Button
+              style={styles.button}
+              color="white"
+              title="Add Medication"
+              onPress={() => navigate('AddMedForm')}
+            />
+
           </ScrollView>
         </View>
       </SafeAreaView>

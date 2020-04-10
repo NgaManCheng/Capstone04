@@ -29,7 +29,7 @@ export default class SignUp extends Component {
     return (
       <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.inputContainer}>
-          <Text style= {styles.titleLogin}>Sign Up</Text>
+          <Text style={styles.titleLogin}>Sign Up</Text>
 
           <TextInput
             value={firstname}
@@ -57,32 +57,27 @@ export default class SignUp extends Component {
             onChangeText={value => this.setState({ email: value })}
           />
           <TextInput
+            secureTextEntry={true}
             value={password}
             placeholder="password"
             style={styles.textInput}
             onChangeText={value => this.setState({ password: value })}
           />
-{/* 
-          <TextInput
-            value={age}
-            placeholder="age"
-            style={styles.textInput}
-            onChangeText={value => this.setState({ age: value })}
-          /> */}
+  
 
           <Button
             onPress={() => {
-              // console.log(auth.currentUser.doc.data())
+              
               if (email && password && username && firstname && lastname) {
                 firestore
                   .collection('publicUsers')
                   .where('username', '==', username)
                   .get()
                   .then(snapshot => {
-                    // console.log(snapshot.docs.length);
+                   
                     if (!snapshot.empty) {
                       alert('Username already exists');
-                      this.setState({ //just erases what was typed
+                      this.setState({ 
                         username: ''
                       });
                     } else {
@@ -97,9 +92,9 @@ export default class SignUp extends Component {
                               firstname,
                               lastname
                             });
-                            navigate('Homepage');
+                          navigate('Info');
                         })
-                        .catch(function(error) {
+                        .catch(function (error) {
                           var errorMessage = error.message;
                           alert(errorMessage);
                         });
