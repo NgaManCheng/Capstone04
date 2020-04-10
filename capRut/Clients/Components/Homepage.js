@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Text, View, Button, Dimensions} from "react-native";
-import {MaterialCommunityIcons} from '@expo/vector-icons';
+import { Text, View, Button, Dimensions } from "react-native";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { render } from "react-dom";
 import { firestore, auth } from '../../fire';
 
@@ -11,7 +11,9 @@ import { ScrollView } from "react-native-gesture-handler";
 
 export default class Homepage extends Component {
     static navigationOptions = {
-        title: 'Welcome'
+        title: 'Welcome',
+        headerRight: <Button title='Sign Out' onPress={() => navigate('Home')} />,
+        headerLeft: null
     };
 
 
@@ -20,47 +22,47 @@ export default class Homepage extends Component {
         const handlePress = () => false
         return (
             <View style={styles.container1}>
-                <View style = {styles.box}>
-                    <MaterialCommunityIcons name = "account-circle" size={50} color="white" />
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="account-circle" size={50} color="white" />
                     <Button
-                            style={styles.button}
-                            color="white"
-                            title="My Profile"
-                            onPress={() => navigate('Profile')}
-                        />
+                        style={styles.button}
+                        color="white"
+                        title="My Profile"
+                        onPress={() => navigate('Profile')}
+                    />
                 </View>
-                <View style = {styles.box}>
-                    <MaterialCommunityIcons name = "format-list-checks" size={50} color="white" />
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="format-list-checks" size={50} color="white" />
                     <Button
-                            style={styles.button}
-                            color="white"
-                            title="Medications"
-                            onPress={() => navigate('AddMedForm', {
-                                userId: auth.currentUser.uid
-                              })}
-                        />
+                        style={styles.button}
+                        color="white"
+                        title="Medications"
+                        onPress={() => navigate('Medications', {
+                            userId: auth.currentUser.uid
+                        })}
+                    />
                 </View>
-                <View style = {styles.box}>
-                    <MaterialCommunityIcons name = "camera" size={50} color="white" />
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="camera" size={50} color="white" />
                     <Button
-                            style={styles.button}
-                            color="white"
-                            title="Upload"
-                            onPress={() => navigate('Upload')}
-                        />
+                        style={styles.button}
+                        color="white"
+                        title="Upload"
+                        onPress={() => navigate('Upload')}
+                    />
                 </View>
-                <View style = {styles.box}>
-                    <MaterialCommunityIcons name = "file-search-outline" size={50} color="white" />
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="file-search-outline" size={50} color="white" />
                     <Button
-                            style={styles.button}
-                            color="white"
-                            title="Files"
-                            onPress={() => navigate('Files')}
-                        />
+                        style={styles.button}
+                        color="white"
+                        title="Files"
+                        onPress={() => navigate('Files')}
+                    />
                 </View>
-                
+
             </View>
 
-          );
+        );
     }
 }

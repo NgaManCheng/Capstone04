@@ -9,6 +9,7 @@ import { FlatList } from 'react-native-gesture-handler';
 export default class Medications extends Component {
  
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.container_signup_form}>
       {/* <View style={styles.container_signup_form}> */}
@@ -68,14 +69,14 @@ export default class Medications extends Component {
 
               
             </Card>
-            <TouchableOpacity
-              style={{ paddingBottom: 50 }}
-              onPress={() => {
-                navigate('AddMedForm')
-              }}
-            >
-              <Button title="Add Medication" color="white" />
-            </TouchableOpacity>
+
+            < Button
+              style={styles.button}
+              color="white"
+              title="Add Medication"
+              onPress={() => navigate('AddMedForm')}
+            />
+
           </ScrollView>
         {/* </View> */}
       </SafeAreaView>
