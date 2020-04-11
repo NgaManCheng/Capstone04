@@ -9,6 +9,7 @@ import Medications from './Medications'
 import AddMedForm from './AddMedForm'
 import Profile from './Profile'
 import Info from './Info'
+import Files from './Files'
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,7 @@ function App() {
         <Stack.Screen name="AddMedForm" component={AddMedForm} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Info" component={Info} />
+        <Stack.Screen name="Files" component={Files} />
       </Stack.Navigator>
     </NavigationContainer>
   );

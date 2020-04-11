@@ -186,5 +186,5 @@ export default (styles = StyleSheet.create({
     flexWrap: 'wrap',
     flex: 1,
     backgroundColor: '#325C74'
-  }
+  },
 }));
