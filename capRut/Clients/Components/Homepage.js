@@ -32,7 +32,7 @@ export default class Homepage extends Component {
                     />
                 </View>
                 <View style={styles.box}>
-                    <MaterialCommunityIcons name="format-list-checks" size={50} color="white" />
+                    <MaterialCommunityIcons name="pill" size={50} color="white" />
                     <Button
                         style={styles.button}
                         color="white"
@@ -43,7 +43,7 @@ export default class Homepage extends Component {
                     />
                 </View>
                 <View style={styles.box}>
-                    <MaterialCommunityIcons name="camera" size={50} color="white" />
+                    <MaterialCommunityIcons name="format-list-checks" size={50} color="white" />
                     <Button
                         style={styles.button}
                         color="white"
@@ -58,6 +58,26 @@ export default class Homepage extends Component {
                         color="white"
                         title="Files"
                         onPress={() => navigate('Files')}
+                    />
+                </View>
+        
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="camera" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Upload"
+                        onPress={() => navigate('Upload')}
+                    />
+                </View>
+                
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="calendar-outline" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Calendar"
+                        onPress={() => navigate('Upload')}
                     />
                 </View>
 
