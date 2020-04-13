@@ -10,6 +10,7 @@ import AddMedForm from './AddMedForm'
 import Profile from './Profile'
 import Info from './Info'
 import Files from './Files'
+import Upload from './Upload'
 
 const Stack = createStackNavigator();
 
@@ -26,6 +27,7 @@ function App() {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Files" component={Files} />
+        <Stack.Screen name="Upload" component={Upload} />
       </Stack.Navigator>
     </NavigationContainer>
   );
