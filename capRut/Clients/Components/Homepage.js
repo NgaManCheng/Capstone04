@@ -133,7 +133,7 @@ export default class Homepage extends Component {
             style={styles.button}
             color="white"
             title="Calendar"
-            onPress={() => navigate('Upload')}
+            onPress={() => navigate('Calendar')}
           />
         </View>
 
