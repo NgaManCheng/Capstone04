@@ -210,8 +210,9 @@ export default styles = StyleSheet.create({
   },
   //Homepage
   box: {
-    height: 115,
-    paddingTop: 20,
+    height: Dimensions.get('window').height / 7.75 - 0,
+    paddingTop: 11,
+    paddingBottom: 10,
     backgroundColor: '#325C74',
     margin: 5,
     width: Dimensions.get('window').width / 2 - 10,

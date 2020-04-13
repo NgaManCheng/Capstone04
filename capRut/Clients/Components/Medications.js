@@ -19,7 +19,7 @@ export default class Medications extends Component {
     const { navigate } = this.props.navigation;
     return (
       <SafeAreaView style={styles.container_signup_form}>
-        {/* <View style={styles.container_signup_form}> */}
+        <View style={styles.container_signup_form}>
 
         <ScrollView>
           <Card title="MEDICATIONS" style={styles.card}>
@@ -75,20 +75,24 @@ export default class Medications extends Component {
               <Text>Directions: Two pills every Monday and Thursday</Text>
               <Text>Provider: Dr.Haque</Text>
             </View>
-            
+           
            
           </Card>
 
           <TouchableOpacity
-            
             // color="white"
             // title="Add Medication"
             onPress={() => navigate('AddMedForm')}
             >
               <Text style={styles.buttonz}>Add Medication</Text>
             </TouchableOpacity>
+
+            {/* Dimension size changes */}
+            <Text style={styles.buttonz}></Text>
+            <Text style={styles.medtitle}></Text>
+            
         </ScrollView>
-        {/* </View> */}
+        </View>
       </SafeAreaView>
     );
   }
