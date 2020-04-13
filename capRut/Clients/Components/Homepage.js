@@ -72,6 +72,36 @@ export default class Homepage extends Component {
                 </View>
                 
                 <View style={styles.box}>
+                    <MaterialCommunityIcons name="alert-octagon-outline" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Allergy"
+                        onPress={() => navigate('Upload')}
+                    />
+                </View>
+
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="doctor" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Doctor"
+                        onPress={() => navigate('Upload')}
+                    />
+                </View>
+
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="shield-check-outline" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Insurance"
+                        onPress={() => navigate('Upload')}
+                    />
+                </View>
+
+                <View style={styles.box}>
                     <MaterialCommunityIcons name="calendar-outline" size={50} color="white" />
                     <Button
                         style={styles.button}
@@ -80,6 +110,18 @@ export default class Homepage extends Component {
                         onPress={() => navigate('Upload')}
                     />
                 </View>
+
+                <View style={styles.box}>
+                    <MaterialCommunityIcons name="clock-alert" size={50} color="white" />
+                    <Button
+                        style={styles.button}
+                        color="white"
+                        title="Reminders"
+                        onPress={() => navigate('Upload')}
+                    />
+                </View>
+
+                
 
             </View>
 
