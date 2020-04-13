@@ -16,13 +16,13 @@ export default class Emergency extends Component {
             <Text style={styles.info}>Age: 22</Text>
 
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Blood Type: A</Text>
+              <Text style={styles.text}>Blood Type: A</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Allergies: Gluten, Nuts</Text>
+              <Text style={styles.text}>Allergies: Gluten, Nuts</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Organ Donor?: Yes</Text>
+              <Text style={styles.text}>Organ Donor?: Yes</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -84,5 +84,9 @@ const styles = StyleSheet.create({
     width: 250,
     borderRadius: 30,
     backgroundColor: '#325C74',
+  },
+  text: {
+    fontSize: 16,
+    color: 'white',
   },
 });

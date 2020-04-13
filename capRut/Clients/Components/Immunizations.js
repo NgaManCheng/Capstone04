@@ -80,6 +80,11 @@ export default class Immunizations extends Component {
           <TouchableOpacity onPress={() => navigate('AddImmForm')}>
             <Text style={styles.buttonz}>Add Immunization</Text>
           </TouchableOpacity>
+
+          {/* Dimension size changes */}
+          <Text style={styles.buttonz}></Text>
+          <Text style={styles.medtitle}></Text>
+
         </ScrollView>
         {/* </View> */}
       </SafeAreaView>

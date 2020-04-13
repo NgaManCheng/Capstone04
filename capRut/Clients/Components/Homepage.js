@@ -145,8 +145,6 @@ export default class Homepage extends Component {
             title="Reminders"
             onPress={() => navigate('Upload')}
           />
-
-         
         </View>
         
       </View>

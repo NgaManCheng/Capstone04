@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 export default class Profile extends Component {
   render() {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
+          <Image
+            style={styles.avatar}
+            source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }}
+          />
           <Text style={styles.name}>Holly Smith</Text>
         </View>
 
         <View style={styles.body}>
           <View style={styles.bodyContent}>
-            <Text style={styles.name}>Rameen</Text>
+            {/* <Text style={styles.name}>Rameen</Text> */}
             {/* <Text style={styles.info}>UX Designer / Mobile developer</Text>
               <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
                */}
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Age: 22</Text>
+              <Text style={styles.text}>Age: 22</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Birthday: 2/19/98</Text>
+              <Text style={styles.text}>Birthday: 2/19/98</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
-              <Text>Gender: Female</Text>
+              <Text style={styles.text}>Gender: Female</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
+              <Text style={styles.text}>Email: hes@rutgers.edu</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -52,19 +59,20 @@ const styles = StyleSheet.create({
   },
 
   body: {
-    marginTop: 40,
+    marginTop: 50,
   },
   bodyContent: {
     flex: 1,
     alignItems: 'center',
-    padding: 30,
+    padding: 0,
+    marginTop: Dimensions.get('window').height/ 20,
   },
   name: {
     fontSize: 58,
     textAlign: 'center',
     color: 'white',
-    fontWeight: '600',
-    top: 60,
+    fontWeight: '500',
+    top: 50,
   },
   info: {
     fontSize: 16,
@@ -84,8 +92,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
-    width: 250,
+    width: 280,
     borderRadius: 30,
     backgroundColor: '#325C74',
+  },
+  text: {
+    fontSize: 16,
+    color: 'white',
   },
 });
