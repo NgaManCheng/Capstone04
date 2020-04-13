@@ -70,7 +70,7 @@ export default class Homepage extends Component {
                         onPress={() => navigate('Upload')}
                     />
                 </View>
-                
+                {/* new feature */}
                 <View style={styles.box}>
                     <MaterialCommunityIcons name="calendar-outline" size={50} color="white" />
                     <Button
