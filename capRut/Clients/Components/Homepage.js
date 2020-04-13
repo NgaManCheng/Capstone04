@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, Button, Dimensions } from "react-native";
+import { Text, View, Button, Dimensions,TouchableOpacity } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { render } from "react-dom";
 import { firestore, auth } from '../../fire';
@@ -47,8 +47,8 @@ export default class Homepage extends Component {
                     <Button
                         style={styles.button}
                         color="white"
-                        title="Upload"
-                        onPress={() => navigate('Upload')}
+                        title="Immunizations"
+                        onPress={() => navigate('Immunizations')}
                     />
                 </View>
                 <View style={styles.box}>

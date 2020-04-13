@@ -14,7 +14,7 @@ import { render } from 'react-dom';
 import { ListItem, Card, Divider } from 'react-native-elements';
 import { FlatList } from 'react-native-gesture-handler';
 
-export default class Medications extends Component {
+export default class Immunizations extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
@@ -22,71 +22,64 @@ export default class Medications extends Component {
         {/* <View style={styles.container_signup_form}> */}
 
         <ScrollView>
-          <Card title="MEDICATIONS" style={styles.card}>
+          <Card title="IMMUNIZATIONS" style={styles.card}>
             <TouchableOpacity>
               <View style={styles.containerM}>
                 <Text style={styles.medtitle}>Tynenol</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Cheng</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text style={styles.medtitle}>MMR</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text style={styles.medtitle}>Measles</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text style={styles.medtitle}>Mumps</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text style={styles.medtitle}>Rubella</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
-                <Text>Directions: Two pills every Monday and Thursday</Text>
+                <Text style={styles.medtitle}>Varicell(Chicken Pox)</Text>
+                <Text>Date: 2/12/16</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <View style={styles.containerM}>
-              <Text style={styles.medtitle}>Advil</Text>
-              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text style={styles.medtitle}>Tetanus</Text>
+              <Text>Date: 2/12/16</Text>
               <Text>Provider: Dr.Haque</Text>
             </View>
             <View style={styles.containerM}>
-              <Text style={styles.medtitle}>Advil</Text>
-              <Text>Directions: Two pills every Monday and Thursday</Text>
+              <Text style={styles.medtitle}>Influenza</Text>
+              <Text>Date: 2/12/16</Text>
               <Text>Provider: Dr.Haque</Text>
             </View>
-            
-           
           </Card>
 
-          <TouchableOpacity
-            
-            // color="white"
-            // title="Add Medication"
-            onPress={() => navigate('AddMedForm')}
-            >
-              <Text style={styles.buttonz}>Add Medication</Text>
-            </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigate('AddImmForm')}>
+            <Text style={styles.buttonz}>Add Immunization</Text>
+          </TouchableOpacity>
         </ScrollView>
         {/* </View> */}
       </SafeAreaView>

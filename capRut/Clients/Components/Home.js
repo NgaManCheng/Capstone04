@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {SafeAreaView, Text, TextInput, View, Button } from "react-native";
+import {SafeAreaView, Text, TextInput, View, Button,TouchableOpacity } from "react-native";
 import {MaterialCommunityIcons} from '@expo/vector-icons';
 import styles from "./Style";
 import { firestore, auth } from '../../fire';

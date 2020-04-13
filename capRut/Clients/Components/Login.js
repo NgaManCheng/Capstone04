@@ -8,12 +8,12 @@ export default class LogIn extends Component {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
     };
   }
 
   static navigationOptions = {
-    title: 'Welcome'
+    title: 'Welcome',
   };
 
   render() {
@@ -27,28 +27,29 @@ export default class LogIn extends Component {
             value={email}
             placeholder="email"
             style={styles.textInput}
-            onChangeText={value => this.setState({ email: value })}
+            onChangeText={(value) => this.setState({ email: value })}
           />
           <TextInput
             secureTextEntry={true}
             value={password}
             placeholder="password"
             style={styles.textInput}
-            onChangeText={value => this.setState({ password: value })}
+            onChangeText={(value) => this.setState({ password: value })}
           />
 
-<Button
+          <Button
             onPress={() => {
               auth
                 .signInWithEmailAndPassword(email, password)
-                .then(user => {
-                  navigate('Homepage');
+                .then((user) => {
+                  navigate('Homepage', {
+                    userId: auth.currentUser.uid,
+                  });
                 })
-                .catch(function(error) {
+                .catch(function (error) {
                   var errorMessage = error.message;
                   alert(errorMessage);
                 });
-                
             }}
             title="Sign In"
             color="#841584"

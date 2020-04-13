@@ -5,11 +5,13 @@ import LogIn from './Login';
 import Home from './Home';
 import SignUp from './Signup';
 import Homepage from './Homepage';
-import Medications from './Medications'
-import AddMedForm from './AddMedForm'
-import Profile from './Profile'
-import Info from './Info'
-import Files from './Files'
+import Medications from './Medications';
+import AddMedForm from './AddMedForm';
+import Profile from './Profile';
+import Info from './Info';
+import Files from './Files';
+import Immunizations from './Immunizations';
+import AddImmForm from './AddImmForm';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,9 @@ function App() {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Files" component={Files} />
+
+        <Stack.Screen name="Immunizations" component={Immunizations} />
+        <Stack.Screen name="AddImmForm" component={AddImmForm} />
       </Stack.Navigator>
     </NavigationContainer>
   );
