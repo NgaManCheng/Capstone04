@@ -12,7 +12,8 @@ import Info from './Info';
 import Files from './Files';
 import Immunizations from './Immunizations';
 import AddImmForm from './AddImmForm';
-import Upload from './Upload'
+import Upload from './Upload';
+import Emergency from './Emergency';
 const Stack = createStackNavigator();
 
 function App() {
@@ -28,10 +29,10 @@ function App() {
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="Info" component={Info} />
         <Stack.Screen name="Files" component={Files} />
-
         <Stack.Screen name="Immunizations" component={Immunizations} />
         <Stack.Screen name="AddImmForm" component={AddImmForm} />
         <Stack.Screen name="Upload" component={Upload} />
+        <Stack.Screen name="Emergency" component={Emergency} />
       </Stack.Navigator>
     </NavigationContainer>
   );

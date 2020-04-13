@@ -1,45 +1,50 @@
-import React, { Component } from "react";
-import {SafeAreaView, Text, TextInput, View, Button,TouchableOpacity } from "react-native";
-import {MaterialCommunityIcons} from '@expo/vector-icons';
-import styles from "./Style";
+import React, { Component } from 'react';
+import {
+  SafeAreaView,
+  Text,
+  TextInput,
+  View,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import styles from './Style';
 import { firestore, auth } from '../../fire';
-
 
 export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: '',
-      password: ''
+      password: '',
     };
   }
 
   static navigationOptions = {
-    title: "Welcome"
+    title: 'Welcome',
   };
-
 
   render() {
     const { navigate } = this.props.navigation;
     const { email, password } = this.state;
     return (
-      <SafeAreaView style ={styles.container_signup_form}>
+      <SafeAreaView style={styles.container_signup_form}>
         <View style={styles.container}>
-          <MaterialCommunityIcons name = "medical-bag" size={80} color="white" />
+          <MaterialCommunityIcons name="medical-bag" size={80} color="white" />
           <Text style={styles.title}>MediHealth</Text>
           <Text style={styles.title}>Tracker</Text>
           <TextInput
             value={email}
             placeholder="email"
             style={styles.textInput}
-            onChangeText={value => this.setState({ email: value })}
+            onChangeText={(value) => this.setState({ email: value })}
           />
           <TextInput
             secureTextEntry={true}
             value={password}
             placeholder="password"
             style={styles.textInput}
-            onChangeText={value => this.setState({ password: value })}
+            onChangeText={(value) => this.setState({ password: value })}
           />
           <Button
             onPress={() => {
@@ -50,11 +55,11 @@ export default class Home extends Component {
                 //     userId: auth.currentUser.uid
                 //   });
                 // })
-                .catch(function(error) {
+                .catch(function (error) {
                   var errorMessage = error.message;
                   alert(errorMessage);
                 });
-            }} 
+            }}
             title="Log In"
             color="white"
           />
@@ -62,13 +67,13 @@ export default class Home extends Component {
             style={styles.button}
             color="white"
             title="Dont have an account yet? Sign up "
-            onPress={() => navigate("Signup")}
+            onPress={() => navigate('Signup')}
           />
           <Button
             style={styles.button}
             color="white"
             title="Homepage"
-            onPress={() => navigate("Homepage")}
+            onPress={() => navigate('Homepage')}
           />
         </View>
       </SafeAreaView>

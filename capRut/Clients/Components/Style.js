@@ -48,6 +48,9 @@ export default styles = StyleSheet.create({
     backgroundColor: '#B7C3D0',
     borderRadius: 25,
   },
+  home: {
+    backgroundColor: '#325C74'
+  },
   userPage: {
     color: 'yellow',
     fontSize: 30,
@@ -88,6 +91,22 @@ export default styles = StyleSheet.create({
     overflow: 'hidden',
     padding: 8,
     top: '50%',
+    textAlign: 'center',
+    alignSelf: 'center',
+    position: 'relative',
+  },
+  buttonsss: {
+    backgroundColor: 'red',
+    borderWidth: 1,
+    borderRadius: 10,
+    borderColor: 'white',
+    color: 'white',
+    fontSize: 24,
+    width: '70%',
+    fontWeight: 'bold',
+    overflow: 'hidden',
+    padding: 8,
+    top: '95%',
     textAlign: 'center',
     alignSelf: 'center',
     position: 'relative',
@@ -191,9 +210,9 @@ export default styles = StyleSheet.create({
   },
   //Homepage
   box: {
-    height: 105,
+    height: 115,
     paddingTop: 20,
-    backgroundColor: "#325C74",  
+    backgroundColor: '#325C74',
     margin: 5,
     width: Dimensions.get('window').width / 2 - 10,
     alignItems: 'center',
