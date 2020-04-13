@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 export default class Profile extends Component {
   render() {
     return (
+      <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}>
           <Image
@@ -29,11 +31,18 @@ export default class Profile extends Component {
               <Text style={styles.text}>Gender: Female</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
+              <Text style={styles.text}>Address: 98 Brett Rd., New Brunswick, NJ 08854</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
+              <Text style={styles.text}>Phone: 123-345-6789</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.text}>Email: hes@rutgers.edu</Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
+      </ScrollView>
     );
   }
 }
@@ -92,8 +101,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 20,
-    width: 280,
-    borderRadius: 30,
+    width: 300,
+    borderRadius: 25,
     backgroundColor: '#325C74',
   },
   text: {

@@ -1,20 +1,28 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { Card } from 'react-native-elements';
 
 export default class Emergency extends Component {
   render() {
     return (
+
+      <ScrollView>
       <View style={styles.container}>
         <View style={styles.header}></View>
         <Image
           style={styles.avatar}
           source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }}
         />
-        <View style={styles.body}>
-          <View style={styles.bodyContent}>
-            <Text style={styles.name}>Rameen </Text>
-            <Text style={styles.info}>Age: 22</Text>
 
+        <View style={styles.body}>
+            <Text style={styles.name}>Rameen </Text>
+            
+          <View style={styles.bodyContent}>
+            
+            <TouchableOpacity style={styles.buttonContainer}>
+              <Text style={styles.text}>Age: 22</Text>
+            </TouchableOpacity>
             <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.text}>Blood Type: A</Text>
             </TouchableOpacity>
@@ -24,9 +32,16 @@ export default class Emergency extends Component {
             <TouchableOpacity style={styles.buttonContainer}>
               <Text style={styles.text}>Organ Donor?: Yes</Text>
             </TouchableOpacity>
+            <TouchableOpacity style={styles.buttonContainer}>
+              <Text style={styles.text}>Emergency Contact Number: 222-444-5555</Text>
+            </TouchableOpacity>
+            
           </View>
+
         </View>
+
       </View>
+      </ScrollView>
     );
   }
 }
@@ -49,9 +64,10 @@ const styles = StyleSheet.create({
     marginTop: 130,
   },
   name: {
-    fontSize: 52,
+    fontSize: 45,
     color: 'black',
-    fontWeight: '600',
+    fontWeight: '500',
+    alignSelf: 'center',
   },
   body: {
     marginTop: 80,
@@ -61,12 +77,14 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     padding: 30,
+    paddingBottom: 10,
   },
 
   info: {
     fontSize: 16,
     color: 'darkblue',
     marginTop: 10,
+    alignSelf: 'center',
   },
   description: {
     fontSize: 16,
