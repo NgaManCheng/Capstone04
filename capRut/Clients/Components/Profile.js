@@ -10,7 +10,7 @@ export default class Profile extends Component {
         <View style={styles.header}>
           <Image
             style={styles.avatar}
-            source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar6.png' }}
+            source={{ uri: 'https://bootdey.com/img/Content/avatar/avatar3.png' }}
           />
           <Text style={styles.name}>Holly Smith</Text>
         </View>

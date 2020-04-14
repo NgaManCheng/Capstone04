@@ -94,8 +94,8 @@ export default class Homepage extends Component {
           <Button
             style={styles.button}
             color="white"
-            title="Allergy"
-            onPress={() => navigate('Upload')}
+            title="Allergies"
+            onPress={() => navigate('Allergies')}
           />
         </View>
 
@@ -105,7 +105,7 @@ export default class Homepage extends Component {
             style={styles.button}
             color="white"
             title="Doctor"
-            onPress={() => navigate('Upload')}
+            onPress={() => navigate('Doctors')}
           />
         </View>
 
@@ -143,7 +143,7 @@ export default class Homepage extends Component {
             style={styles.button}
             color="white"
             title="Reminders"
-            onPress={() => navigate('Upload')}
+            onPress={() => navigate('Reminders')}
           />
         </View>
         
