@@ -15,6 +15,7 @@ import AddImmForm from './AddImmForm';
 import Upload from './Upload';
 import Emergency from './Emergency';
 import Calendar from './Calendar';
+import Insurance from './Insurance';
 const Stack = createStackNavigator();
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Stack.Screen name="Upload" component={Upload} />
         <Stack.Screen name="Emergency" component={Emergency} />
         <Stack.Screen name="Calendar" component={Calendar} />
+        <Stack.Screen name="Insurance" component={Insurance} />
       </Stack.Navigator>
     </NavigationContainer>
   );

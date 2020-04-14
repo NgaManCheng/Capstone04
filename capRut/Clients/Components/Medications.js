@@ -25,53 +25,61 @@ export default class Medications extends Component {
           <Card title="MEDICATIONS" style={styles.card}>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Tynenol</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Tynenol</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Cheng</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity>
               <View style={styles.containerM}>
-                <Text style={styles.medtitle}>Advil</Text>
+                <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+                <Divider style={{ backgroundColor: 'darkblue'}} />
                 <Text>Directions: Two pills every Monday and Thursday</Text>
                 <Text>Provider: Dr.Haque</Text>
               </View>
             </TouchableOpacity>
             <View style={styles.containerM}>
-              <Text style={styles.medtitle}>Advil</Text>
+              <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+              <Divider style={{ backgroundColor: 'darkblue'}} />
               <Text>Directions: Two pills every Monday and Thursday</Text>
               <Text>Provider: Dr.Haque</Text>
             </View>
             <View style={styles.containerM}>
-              <Text style={styles.medtitle}>Advil</Text>
+              <Text style={styles.medtitle, {alignSelf: "center", fontSize: 16, fontWeight: "500"}}>Advil</Text>
+              <Divider style={{ backgroundColor: 'darkblue'}} />
               <Text>Directions: Two pills every Monday and Thursday</Text>
               <Text>Provider: Dr.Haque</Text>
             </View>

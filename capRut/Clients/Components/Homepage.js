@@ -119,7 +119,7 @@ export default class Homepage extends Component {
             style={styles.button}
             color="white"
             title="Insurance"
-            onPress={() => navigate('Upload')}
+            onPress={() => navigate('Insurance')}
           />
         </View>
 
