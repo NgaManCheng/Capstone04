@@ -15,6 +15,9 @@ import AddImmForm from './AddImmForm';
 import Upload from './Upload';
 import Emergency from './Emergency';
 import Calendar from './Calendar';
+import Doctors from './Doctors';
+import Allergies from './Allergies';
+import Reminders from './Reminders';
 const Stack = createStackNavigator();
 
 function App() {
@@ -35,6 +38,9 @@ function App() {
         <Stack.Screen name="Upload" component={Upload} />
         <Stack.Screen name="Emergency" component={Emergency} />
         <Stack.Screen name="Calendar" component={Calendar} />
+        <Stack.Screen name="Doctors" component={Doctors} />
+        <Stack.Screen name="Allergies" component={Allergies} />
+        <Stack.Screen name="Reminders" component={Reminders} />
       </Stack.Navigator>
     </NavigationContainer>
   );
